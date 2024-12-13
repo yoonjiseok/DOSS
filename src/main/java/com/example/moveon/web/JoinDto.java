@@ -1,6 +1,6 @@
 package com.example.moveon.web;
 
-import io.swagger.models.auth.In;
+
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 

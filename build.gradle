@@ -48,26 +48,31 @@ dependencies {
 	//swagger 사용
 
 
-	//implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.2'
-	//implementation 'io.springfox:springfox-boot-starter:3.0.0'
-	implementation group: 'io.springfox', name: 'springfox-swagger2', version: '3.0.0'
-	implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
-	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0'
-
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0'
 
 
 //	implementation 'org.springframework.boot:spring-boot-starter-security'
 //	testImplementation 'org.springframework.security:spring-security-test'
 
 	// 타임리프 사용
-//	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 
 	// 타임리프에서 시큐리티 사용
 //	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6:3.1.1.RELEASE'
 
 	// Spring Security OAuth2 클라이언트 의존성 추가
 //	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+// postgres
+	implementation 'org.postgresql:postgresql'
 
+// hibernate-spatial
+	//implementation 'org.hibernate:hibernate-spatial:6.5.3.Final'
+
+	// geo.point 를 사용하기 위해 추가
+	implementation group: 'org.hibernate', name: 'hibernate-spatial', version: '6.4.2.Final'
+
+	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+	implementation 'org.redisson:redisson-spring-boot-starter:3.16.3'
 
 }
 

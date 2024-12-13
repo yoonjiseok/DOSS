@@ -5,10 +5,9 @@ import lombok.Getter;
 
 @AllArgsConstructor
 @Getter
-public enum Gender {
-    MALE("남성"),
-    FEMALE("여성"),
-    NONE("공개 안함");
+public enum RegionLevel {
+    CITY("city"),
+    PROVINCE("PROVINCE");
 
-    private final String gender;
+    private final String level;
 }

@@ -1,8 +1,11 @@
 package com.example.moveon.repository;
 
-import com.example.moveon.domain.step_record;
-import com.example.moveon.domain.user;
+import com.example.moveon.domain.StepRecord;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface StepRecordRepository extends JpaRepository<step_record, Long> {
+import java.util.Date;
+import java.util.List;
+
+public interface StepRecordRepository extends JpaRepository<StepRecord, Long> {
+    List<StepRecord> findByUserIdAndDateBetween(Long userId, Date startDate, Date endDate);
 }

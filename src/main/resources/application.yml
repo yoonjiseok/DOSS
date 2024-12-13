@@ -1,4 +1,3 @@
-
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/moveon
@@ -18,3 +17,9 @@ spring:
         hbm2ddl:
           auto: update
         default_batch_fetch_size: 1000
+        # -------------------- geo.point 사용하기 위해 추가 -----------------------------
+    database-platform: org.hibernate.spatial.dialect.mysql.MySQL56InnoDBSpatialDialect
+  data:
+      redis:
+        host: localhost
+        port: 6379
