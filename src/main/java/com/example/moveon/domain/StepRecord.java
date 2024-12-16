@@ -42,6 +42,8 @@ public class StepRecord extends BaseTimeEntity {
 
     private Time run_time;
 
+    private String memo;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private User user;

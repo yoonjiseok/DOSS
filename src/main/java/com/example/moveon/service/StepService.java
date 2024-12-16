@@ -38,6 +38,7 @@ public class StepService {
                         .distance(userStepInfo.getDistance())
                         .HRate(userStepInfo.getHRate())
                         .run_time(userStepInfo.getRun_time())
+                        .memo(userStepInfo.getMemo())
                         .build()
         );
     }
