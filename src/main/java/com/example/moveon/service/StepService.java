@@ -34,7 +34,7 @@ public class StepService {
                 StepRecord.builder()
                         .user(user)
                         .steps(userStepInfo.getSteps())
-                        .date(userStepInfo.getDate())
+                        .runDate(userStepInfo.getDate())
                         .distance(userStepInfo.getDistance())
                         .HRate(userStepInfo.getHRate())
                         .run_time(userStepInfo.getRun_time())
@@ -51,10 +51,10 @@ public class StepService {
      * @return 7일간 걸음수 List
      * */
     public List<Integer> getUserStepWhileWeek(Long userId, Date startDate, Date endDate) {
-        List<StepRecord> stepRecordList = stepRecordRepository.findByUserIdAndDateBetween(userId, startDate, endDate);
+        List<StepRecord> stepRecordList = stepRecordRepository.findByUserIdAndRunDateBetween(userId, startDate, endDate);
 
         Map<Date, Integer> stepsMap = stepRecordList.stream()
-                .collect(Collectors.toMap(StepRecord::getDate, StepRecord::getSteps));
+                .collect(Collectors.toMap(StepRecord::getRunDate, StepRecord::getSteps));
 
         List<Integer> result = new ArrayList<>();
         Calendar calendar = Calendar.getInstance();

@@ -32,7 +32,7 @@ public class StepRecord extends BaseTimeEntity {
     @Column(name = "step_record_id")
     private Long id;
 
-    private Date date;
+    private Date runDate;
 
     private Integer steps;
 

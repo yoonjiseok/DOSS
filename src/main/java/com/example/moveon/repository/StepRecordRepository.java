@@ -7,5 +7,5 @@ import java.util.Date;
 import java.util.List;
 
 public interface StepRecordRepository extends JpaRepository<StepRecord, Long> {
-    List<StepRecord> findByUserIdAndDateBetween(Long userId, Date startDate, Date endDate);
+    List<StepRecord> findByUserIdAndRunDateBetween(Long userId, Date startDate, Date endDate);
 }
