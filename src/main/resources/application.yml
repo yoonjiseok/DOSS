@@ -24,7 +24,7 @@ spring:
         host: localhost
         port: 6379
 naver:
-  apiKeyId: one8tqbr52
-  apiKey: QtgdSJeK0akw0OsiVmkCD4IeFbdmXIlgn9nz5GmJ
+  apiKeyId: 
+  apiKey:
 geocoding:
-  api: AIzaSyCOgjPKGzv6rIw-nAjhQVRlpwViqSbm3cs
+  api: 
